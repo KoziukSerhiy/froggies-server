@@ -1,0 +1,17 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "duncan",
+      "password": "123"
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Learn React",
+      "body": "Crate a pet project",
+      "completed": false
+    }
+  ]
+}
