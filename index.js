@@ -1,9 +1,6 @@
 const jsonServer = require("json-server");
 const { DBFile } = require("./core/constants");
 
-const users = require("./routes/users");
-const tasks = require("./routes/tasks");
-
 const server = jsonServer.create();
 const router = jsonServer.router(DBFile);
 const middlewares = jsonServer.defaults();
@@ -14,8 +11,8 @@ server.use(middlewares);
 server.use(jsonServer.bodyParser);
 
 // routes
-server.use(users);
-server.use(tasks);
+server.use("/users", require("./routes/usersRoute"));
+server.use("/tasks", require("./routes/tasksRoute"));
 
 server.use(router);
 
